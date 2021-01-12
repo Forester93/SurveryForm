@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2Fpresto%2F2018%2F12%2F14%2FPBIN%2Ff19d26da-ea2a-4948-87ba-f8c805b5c834-GettyImages-901630488.jpg%3Fcrop%3D1453%2C817%2Cx0%2Cy0%26width%3D1600%26height%3D800%26fit%3Dbounds&f=1&nofb=1);
+                background-size:cover;
+                opacity: 1;
+            }
+            main{
+                opacity:1;
+            }
+            #title{
+                display:block;
+                text-align: center;
+                color:dodgerblue;
+            }
+            section, form{
+                background-color:aliceblue;
+                border: 2px solid #333333;
+                border-radius:25px;
+                width:fit-content;
+                padding:25px 25px 25px 25px;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                font-size:large;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            label{
+                margin-top:25px;
+                margin-bottom:25px;
+            }
+            input[type="text"], input[type="textarea"],input[type="email"]{
+                width:25vw;
+                height:1vw;
+                border: 2px solid dodgerblue;
+                margin:10px;
+                border-radius:4px;
+            }
+            @media (min-width:300px){
+                input[type="text"], input[type="textarea"],input[type="email"]{
+                width:50vw;
+                height:20px;
+                }
+            }
+
+            @media (min-width:600px){
+                input[type="text"], input[type="textarea"],input[type="email"]{
+                    width:25vw;
+                    height:1vw;
+                }
+                input[type="textarea"]{
+                    height:5vw;
+                }
+            }
+            
+            input[type="textarea"]{
+                width:30vw;
+                height:25vw;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            input[type="submit"]{
+                width:25vw;
+                text-align:center;
+                margin:10px;
+                background-color:whitesmoke;
+                border: 2px solid dodgerblue;
+                font-weight:bold;
+                font-size: medium;
+                border-radius:5px;
+                padding:3px;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            input[type="submit"]:hover{
+                width:25vw;
+                text-align:center;
+                margin:10px;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                background-color:rgb(231, 85, 85);
+                border: 2px solid rgb(9, 12, 15);
+                font-weight:bold;
+                font-size: medium;
+                border-radius:5px;
+                padding:3px;
+            }
+            input[type="radio"], input[type="checkbox"]{
+
+                margin:10px;
+            }
+            select{
+                display: block;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top:10px;
+                border: 2px solid dodgerblue;
+                font-size: medium;
+                padding:5px 5px 5px 5px;
+                border-radius:4px;
+
+            }
+        </style>
+        <title>
+            Survey Form for People Who Visited Egypt
+        </title>
+    </head>
+    <main>
+        <section>
+            <h1 id="title">
+                We <em>really</em> appreciate your opinion!
+            </h1>
+        </section>
+        <form id="survey-form">
+            <p id="description">
+                This survery is made so you can help us organise a better trip<br> next time by giving us your precious feedback.<br><br>
+            </p>
+            <hr>
+            <label for="fullname" id="name-label">
+                Full Name*:<br>
+            </label>
+                <input type="text" id="name" name="fullname" placeholder="Please Enter Your Full Name" required><br><br>
+            <label for="email-address" id="email-label">
+                Email*:<br>
+            </label>
+                <input type="email" id="email" name="email-address" placeholder="Please Enter Your Email" required><br><br>
+            <label for="trip-year" id="number-label">
+                Trip Year*:<br>
+            </label>
+                <input type="text" id="number" name="trip-year" placeholder="Please Enter Your Trip Year" min="2018" max="2020" required><br><br>
+            <hr>
+            <fieldset>
+                What is your opinion of the trip?<br>
+                <input type="radio" id="choice1" name="choice-radio" checked=true> I really liked it. Will go again.<br>
+                <input type="radio" id="choice2" name="choice-radio"> I liked it. One time was enough.<br>
+                <input type="radio" id="choice3" name="choice-radio"> It was okay.<br>
+                <input type="radio" id="choice3" name="choice-radio"> I did not like it.<br>
+                <input type="radio" id="choice3" name="choice-radio"> I wish I've never gone.<br>
+            </fieldset>
+            <hr>
+            <fieldset>
+                If you can name a favourite city, which one would it be?<br>
+                <select id="dropdown" name="favourite-city">
+                    <option value="Cairo">Cairo</option>
+                    <option value="Luxor">Luxor</option>
+                    <option value="Aswan">Aswan</option>
+                    <option value="None">None</option>
+                </select>
+            </fieldset>
+            <hr>
+            <fieldset id="things-enjoyed">
+                What would be the things you enjoyed most in Egypt?<br><br>
+                <label for="things-enjoyed"><input type="checkbox" value="Food">Food<br></label>
+                <label for="things-enjoyed"><input type="checkbox" value="Historical Sites">Historical Sites<br></label>
+                <label for="things-enjoyed"><input type="checkbox" value="Good Company">Good Company<br></label>
+                <label for="things-enjoyed"><input type="checkbox" value="Visiting Family and Friends">Visiting Family and Friends<br></label>
+                <label for="things-enjoyed"><input type="checkbox" value="Others">Others: <input type="text" name="other-things" id="others-text" placeholder="Please specify"><br></label>
+            </fieldset>
+            <hr>
+            <label for="text-comments" id="comments-label">
+                Further Comments:<br>
+            </label>
+                <input type="textarea" id="comments" name="trip-year" placeholder="Please Enter Any Further Comments"><br><br>
+
+            <input type="submit" id="submit" name="submitform"><br><br>
+        </form>
+
+
+        <footer>
+
+        </footer>
+    </main>
+</html>
